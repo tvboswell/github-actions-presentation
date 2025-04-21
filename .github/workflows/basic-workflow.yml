@@ -45,7 +45,7 @@ jobs:
     - name: Send greeting
       run: |
         echo "Hello ${{ github.event.inputs.name }}" 
-        echo "URL ${{ github.event.enterprise.html_url }}""
+        echo "repo ID ${{ github.event.repository.id }}""
         echo "Your favorite city is ${{ github.event.inputs.city }}"
         echo "Is your favorite color blue: ${{ github.event.inputs.fav-color-blue }}"
         
