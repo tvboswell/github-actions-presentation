@@ -29,6 +29,15 @@ on:
         description: "Is your favorite color blue"
         required: true
         type: boolean
+      state:
+        description: "Favorite State"
+        required: true
+        default: "Cali"
+        type: choice
+        options:
+        - Cali
+        - NY
+        - FL
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -45,7 +54,7 @@ jobs:
     - name: Send greeting
       run: |
         echo "Hello ${{ github.event.inputs.name }}" 
-        echo "repo ID ${{ github.event.repository.id }}"
+        echo "State ${{ github.event.inputs.state }}"
         echo "Your favorite city is ${{ github.event.inputs.city }}"
         echo "Is your favorite color blue: ${{ github.event.inputs.fav-color-blue }}"
         
