@@ -8,4 +8,8 @@ Please bear with me.
 git reset --hard <the latest version>
 git push --force
 
+git remote set-url origin https://username:token@github.com/username/repository.git
+
+https://github.com/tvboswell/github-actions-presentation.git
+
 
